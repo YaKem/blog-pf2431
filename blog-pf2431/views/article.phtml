@@ -1,0 +1,53 @@
+<div id="article">
+	<article>
+		<h2><span><?= htmlspecialchars($article['title']) ?></span></h2>
+		<h4><?= htmlspecialchars($article['createdAt']) ?>, By <?= htmlspecialchars($article['author']) ?></h4>
+		<img src="/assets/images/post2.png" alt="MyImage"/>
+		<p><?= htmlspecialchars($article['content']) ?></p>
+	</article>
+	<div class="postForm">
+		<h2><span>Leave a message</span></h2>
+		<form class="form-common" action="index.php?r=create-post" method="post">
+			<ul>
+				<li>
+					<input type="hidden" name="values[article_id]" value="<?= $article['id'] ?>"/>
+				</li>
+				<li>
+					<label for="lastname">Your Name*:</label>
+					<input id="lastname" type="text" name="values[name]" placeholder="Enter Name" required="1"/>
+				</li>
+				<li>
+					<label for="mail">Your Email Address*:</label>
+					<input id="mail" type="email" name="values[email]" placeholder="Enter Email Address" required="1"/>
+				</li>
+				<li>
+					<label for="message">Your Message*:</label>
+					<textarea id="message" name="values[content]"></textarea>
+				</li>
+				<li>
+					<input type="submit" name="submit" value="Submit"/>
+				</li>
+			</ul>
+		<form>
+	</div>
+	<div class="postList">
+		<h2><span>Posts</span></h2>
+		<?php foreach($posts as $post): ?>
+			<div class="post">
+				<h4><?= htmlspecialchars($post['createdAt']) ?>, By <?= htmlspecialchars($post['name']) ?></h4>
+				<hr/>
+				<p><?= htmlspecialchars($post['content']) ?></p>
+				<button class="btn">Reply</button>
+			</div>
+		<?php endforeach ?>
+	</div>	
+	<div class="relatedpost">
+		<h2><span>Related articles</span></h2>
+		<a href="#"><img src="/assets/images/post1.jpg" alt="post image"/></a>
+		<a href="#"><img src="/assets/images/post1.jpg" alt="post image"/></a>
+		<a href="#"><img src="/assets/images/post1.jpg" alt="post image"/></a>
+		<a href="#"><img src="/assets/images/post1.jpg" alt="post image"/></a>
+		<a href="#"><img src="/assets/images/post1.jpg" alt="post image"/></a>
+		<a href="#"><img src="/assets/images/post1.jpg" alt="post image"/></a>
+	</div>
+</div>

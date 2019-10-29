@@ -1,0 +1,31 @@
+<div id="contact">
+	<h2><span>Contact us</span></h2>
+	<?php if(!empty($_SESSION['errors'])): ?>
+		<?php foreach($_SESSION['errors'] as $v): ?>
+			<p><?= $v ?></p>
+		<?php endforeach; ?>
+	<?php endif; ?>
+	<form class="form-common" action="index.php?r=create-contact" method="post">
+		<ul>
+			<li>
+				<label for="firstname">Your First Name*:</label>
+				<input id="firstname" type="text" name="values[firstname]" placeholder="Enter first name" value="<?= $_SESSION['values']['firstname'] ?? '' ?>"/>
+			</li>
+			<li>
+				<label for="lastname">Your Last Name*:</label>
+				<input id="lastname" type="text" name="values[lastname]" placeholder="Enter Last name" value="<?= $_SESSION['values']['lastname'] ?? '' ?>"/>
+			</li>
+			<li>
+				<label for="mail">Your Email Address*:</label>
+				<input id="mail" type="email" name="values[email]" placeholder="Enter Email Address" value="<?= $_SESSION['values']['email'] ?? '' ?>"/>
+			</li>
+			<li>
+				<label for="message">Your Message*:</label>
+				<textarea id="message" name="values[content]"><?= $_SESSION['values']['content'] ?? '' ?></textarea>
+			</li>
+			<li>
+				<input type="submit" name="submit" value="Submit"/>
+			</li>
+		</ul>
+	</form>
+</div>

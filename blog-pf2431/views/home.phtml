@@ -1,0 +1,9 @@
+<article id="home">
+	<?php foreach($articles as $article): ?>
+		<h2><a href=""><span><?= htmlspecialchars($article['title']) ?></span></a></h2>
+		<h4><?= htmlspecialchars($article['createdAt']) ?>, By <a href="index.php?about"><?= htmlspecialchars($article['author']) ?></a></h4>
+		<a href="#"><img src="/assets/images/post1.jpg" alt="post image"/></a>
+		<p><?= htmlspecialchars(substr($article['content'], 0, 250)) ?></p>
+		<a class="btn" href="index.php?r=article/id/<?= $article['id'] ?>">Read More</a>
+	<?php endforeach; ?>
+</article>

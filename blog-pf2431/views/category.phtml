@@ -1,0 +1,9 @@
+<h1><?= htmlspecialchars($results[0]['category']) ?></h1>
+<?php foreach($results as $result): ?>
+    <?= htmlspecialchars($result['title']) ?>
+    <br/>
+    <?= htmlspecialchars($result['createdAt']) ?> by <?= htmlspecialchars($result['author']) ?>
+    <br/>
+    <hr/>
+    <?= htmlspecialchars($result['content']) ?>
+<?php endforeach; ?>

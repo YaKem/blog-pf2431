@@ -1,0 +1,249 @@
+/***** FONTFACE *****/
+
+/***** GLOBAL *****/
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Open Sans";
+    background: url("../images/bg.png") repeat;
+    margin: 0;
+    line-height: 1.5rem;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+li {
+    list-style-type: none;
+}
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+div.container {
+    display: flex;
+}
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+h2:after {
+	content: "";
+	display: block;
+	border-top: 1px solid rgba(176,144,103,0.3);
+	margin-top: -10px;
+}
+h2 span {
+	background-color: bisque;
+    padding: 10px;
+}
+.form-common label {
+    font-weight: bolder;
+}
+.form-common li:nth-of-type(-n+4) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+#arrow {
+    width: 40px;
+    background-color: white;
+}
+
+/***** HEADER *****/
+header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: peru;
+}
+header > a {
+    flex: 1;
+}
+header > a img {
+    width: 100px;
+    margin-right: 10px;
+    float: left;
+}
+header > a h2 {
+    color: white;
+    font-size: 2rem;
+}
+header > a p {
+    color: white;
+}
+header > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+
+}
+header .fa {
+    margin: 10px;
+    color: white;
+    font-size: 2rem;
+}
+header form {
+    margin: 0 10px;
+}
+header nav {
+    background-color: burlywood;
+    width: 100%;
+}
+header nav ul {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+}
+header nav ul li {
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all .5s;
+    padding: 15px 20px;
+}
+header nav ul a {
+    color: white;
+}
+header nav ul li:hover {
+    color: lightgrey;
+    background-color: #B09067;
+}
+
+/***** MAIN *****/
+main {
+    background-color: bisque;
+    border: 1px solid grey;
+    padding: 10px 20px;
+    margin: 10px 2% 10px 0;
+    width: 65%;
+}
+
+/***** ASIDE *****/
+aside {
+    margin: 10px 0;
+    width: 33%;
+}
+aside section:first-of-type {
+    background-color: bisque;
+    border: 1px solid grey;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+aside section:first-of-type a {
+    cursor: pointer;
+}
+aside section:first-of-type a:hover {
+    text-decoration: underline;
+}
+aside section:nth-of-type(2) {
+    background-color: bisque;
+    border: 1px solid grey;
+    padding: 10px 20px;
+}
+aside section:nth-of-type(2) img {
+    float: left;
+    width: 50%;
+    margin: 5px 5px 0 0;
+}
+aside  section:nth-of-type(2) p {
+    text-align: justify;
+}
+
+/***** FOOTER *****/
+footer {
+    background-color: peru;
+    text-align: center;
+}
+footer nav {
+    background-color: burlywood;
+    width: 100%;
+}
+footer nav ul {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+    justify-content: center;
+}
+footer nav ul li {
+    width: 100px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 10px 0;
+}
+footer nav ul a {
+    color: white;
+}
+footer nav ul li:hover {
+    color: lightgrey;
+    background-color: grey;
+}
+footer p {
+    margin: 10px 0;
+}
+
+/***** HOME *****/
+#home h2 {
+    clear: both;
+}
+#home img {
+    float: left;
+    margin: 5px 10px 0 0;
+    width: 50%;
+}
+#home p {
+	text-align: justify;
+}
+.btn {
+    background-color: #B09067;
+	color: white;
+	text-transform: uppercase;
+	padding: 10px 15px;
+	margin: 10px 0;
+	text-align: center;
+	float: right;
+	letter-spacing: 0.1rem;
+}
+.btn:hover {
+    background-color: rgba(176,144,103,0.75);
+	color: white;
+}
+
+/***** ARTICLE *****/
+#article > article > img {
+    width: 100%;
+}
+#postList {
+    margin: 10px 0;
+}
+.post {
+    overflow: hidden;
+}
+.post p {
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+}
+#relatedpost {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#relatedpost h2 {
+    flex-basis: 100%;
+}
+#relatedpost a {
+    width: 48%;
+}
+#relatedpost img {
+    width: 100%;
+}
+
+

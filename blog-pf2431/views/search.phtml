@@ -1,0 +1,10 @@
+<?php if(isset($results) && !empty($results)): ?>
+    <?php foreach($results as $result): ?>
+        <?= htmlspecialchars($result['title']) ?>
+        <hr/>
+        <?= str_replace($keyword, '<span style="background-color: yellow">'.$keyword.'</span>', htmlspecialchars($result['content'])) ?>
+        <br/>
+    <?php endforeach; ?>
+<?php else: ?>
+    <p>Vous n'avez aucun résultat pour le terme <?= $keyword ?>.</p>
+<?php endif; ?>
